@@ -15,18 +15,39 @@ Servidor deve iniciar com:
 npm run start
 ```
 
-Estrutura
+Estrutura:
+```
 .
+│
 ├── node_modules
+│
 ├── package.json
+│
 ├── package-lock.json
+│
 ├── README.md
+│
 ├── src (código fonte)
+│   │
+│   ├── config
+│   │   │
+│   │   └── dbConfig.js
+│   │
 │   ├── controller
+│   │   │
 │   │   └── controler.js
+│   │
 │   ├── index.js
+│   │
 │   ├── model
+│   │   │
 │   │   └── model.js
+│   │
 │   └── route (rotas)
+│       │
 │       └── route.js
+│
 └── uploads (uploads de arquivos para o servidor)
+    │
+    └──
+```
