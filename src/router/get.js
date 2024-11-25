@@ -1,7 +1,7 @@
 // Arquivo que contem as rotas do metodo HTTP GET
 
 import express from "express";
-import { enviarSenha } from "../controller.js";
+import { enviarSenha, enviarPaciente, enviarAtividade, enviarFuncionario} from "../controller.js";
 
 
 const getRoute=(app) => {
