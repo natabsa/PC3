@@ -18,36 +18,24 @@ npm run start
 Estrutura:
 ```
 .
-│
 ├── node_modules
-│
+│   └──...
 ├── package.json
-│
 ├── package-lock.json
-│
 ├── README.md
-│
-├── src (código fonte)
-│   │
-│   ├── config
-│   │   │
+├── src (codigo fonte)
+│   ├── config (configuracoes necessarias)
 │   │   └── dbConfig.js
-│   │
-│   ├── controller
-│   │   │
+│   ├── controller (controle e logica da aplicacao)
 │   │   └── controler.js
-│   │
 │   ├── index.js
-│   │
-│   ├── model
-│   │   │
+│   ├── model (modelo de dados e acesso aos mesmos)
 │   │   └── model.js
-│   │
-│   └── route (rotas)
-│       │
-│       └── route.js
-│
-└── uploads (uploads de arquivos para o servidor)
-    │
-    └──
+│   └── router (rotas da aplicacao)
+│       ├── delete.js
+│       ├── get.js
+│       ├── post.js
+│       └── put.js
+└── uploads
+│   └──...
 ```
