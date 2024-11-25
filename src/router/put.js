@@ -10,10 +10,10 @@ const putRoute=(app) => {
     // Middleware para "parsear" o body das requests
     app.use(express.json());
     
-    // Rota para alterar cadastro de paciente
+    // Rota para alterar cadastro de velhinho
     app.put("/alterar/paciente", altPaciente);
 
-    // Rota para alterar cadastro de funcionario
+    // Rota para alterar cadastro de cuidador e admin
     app.put("/alterar/funcionario", altFuncionario);
 };
 

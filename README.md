@@ -1,6 +1,6 @@
 # Node + Express Server
 
-Respositório para o projeto desenvolvido na discipplina de PC3-IFB 2024/2.
+Respositório para o projeto desenvolvido na disciplina de PC3-IFB 2024/2.
 
 ## Getting Started
 

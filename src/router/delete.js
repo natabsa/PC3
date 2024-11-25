@@ -10,14 +10,14 @@ const deleteRoute=(app) => {
     // Middleware para "parsear" o body das requests
     app.use(express.json());
     
-    // Rota para deletar cadastro de paciente
-    app.delete("/deletar/paciente", delPaciente);
+    // Rota para deletar cadastro de velhinho
+    app.delete("/deletar/paciente/:id", delPaciente);
 
-    // Rota para deletar cadastro de funcionario
-    app.delete("/deletar/funcionario", delFuncionario);
+    // Rota para deletar cadastro de cuidador
+    app.delete("/deletar/funcionario/:id", delFuncionario);
 
-    // Rota para deletar vinculo funcionario-paciente
-    app.delete("/deletar/vinculo", delVinculo);
+    // Rota para deletar vinculo cuidador-velhinho
+    app.delete("/deletar/vinculo/:id", delVinculo);
 };
 
 export default deleteRoute;
