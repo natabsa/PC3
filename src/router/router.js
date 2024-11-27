@@ -18,11 +18,16 @@ const route=(app) => {
     // Rota para recuperar senha
     app.get("/login/esqueciSenha/:id", enviarSenha);
 
+    // Rota que retorna um copia do banco de dados ou um subconjunto deste
+    app.get("/banco/func", enviarBancoFunc);
+    app.get("banco/adm", enviarBancoAdm);
+
     // Rota para cadastrar "objeto genereico"
     app.post("/cadastrar/:obj", cadObj);
 
     // Rota para alterar cadastro de "objeto genereico"
     app.put("/:obj/:id", altObj);
+
 };
 
 export default route;
