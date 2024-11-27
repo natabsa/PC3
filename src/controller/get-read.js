@@ -35,3 +35,15 @@ export async function enviarAtividade(req, res)
         res.status(500).json({ Error: "Falha ao tentar consultar o registro de vinculo paciente-funcionario" });
     }
 }
+
+export async function enviarObj(req, res){
+
+    try 
+    {
+        res.status(200).json(await read(req.params.obj, req.params.id));
+    } catch(error)
+    {
+        console.log(error.toString());
+        res.status(500).json({ Error: `Falha ao tentar consultar o registro de ${req.params.obj}` });
+    }
+}

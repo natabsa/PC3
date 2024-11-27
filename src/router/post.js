@@ -1,7 +1,7 @@
 // Arquivo que contem as rotas do metodo HTTP POST
 
 import express from "express";
-import {cadPaciente, cadFuncionario, cadVinculo, cadAtividade} from "../controller.js";
+import {cadPaciente, cadFuncionario, cadVinculo, cadAtividade, cadObj} from "../controller.js";
 
 
 const postRoute=(app) => {
@@ -20,6 +20,8 @@ const postRoute=(app) => {
 
     // Rota para marcar uma atividade a um cuidador
     app.post("/cadastrar/atividade", cadAtividade);
+
+    app.post("/cadastrar/:obj", cadObj);
 };
 
 export default postRoute;

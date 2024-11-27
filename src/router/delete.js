@@ -18,6 +18,9 @@ const deleteRoute=(app) => {
 
     // Rota para deletar vinculo cuidador-velhinho
     app.delete("/vinculo/:id", delVinculo);
+
+    // Rota para deletar cadastro de velhinho
+    app.delete("/:obj/:id", delObj);
 };
 
 export default deleteRoute;

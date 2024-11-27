@@ -1,7 +1,7 @@
 // Arquivo que contem as rotas do metodo HTTP GET
 
 import express from "express";
-import { enviarSenha, enviarPaciente, enviarAtividade, enviarFuncionario} from "../controller.js";
+import { enviarSenha, enviarPaciente, enviarAtividade, enviarFuncionario, enviarObj, enviarVinculo } from "../controller.js";
 
 
 const getRoute=(app) => {
@@ -23,6 +23,9 @@ const getRoute=(app) => {
 
     // Rota que enviara o registo de um vinculo funcionario-cuidador
     app.get("/vinculo/:id", enviarVinculo);
+
+    // Rota que enviara o registo de um ojeto generico
+    app.get("/:obj/:id", enviarObj);
 };
 
 export default getRoute; 
