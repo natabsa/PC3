@@ -20,6 +20,9 @@ const getRoute=(app) => {
 
     // Rota que enviara o registro de um cuidador
     app.get("/funcionario/:id", enviarFuncionario);
+
+    // Rota que enviara o registo de um vinculo funcionario-cuidador
+    app.get("/vinculo/:id", enviarVinculo);
 };
 
 export default getRoute; 

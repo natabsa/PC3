@@ -11,10 +11,10 @@ const putRoute=(app) => {
     app.use(express.json());
     
     // Rota para alterar cadastro de velhinho
-    app.put("/alterar/paciente", altPaciente);
+    app.put("/paciente/:id", altPaciente);
 
     // Rota para alterar cadastro de cuidador e admin
-    app.put("/alterar/funcionario", altFuncionario);
+    app.put("/funcionario/:id", altFuncionario);
 };
 
 export default putRoute;
