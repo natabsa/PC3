@@ -46,14 +46,3 @@ export async function altPaciente(req, res)
 }
 
 
-export async function altObj(req, res){
-
-    try 
-    {
-        res.status(200).json(await update(req.params.obj, req.params.id));
-    } catch(error)
-    {
-        console.log(error.toString());
-        res.status(500).json({ Error: `Falha ao tentar alterar registro de ${req.params.obj}` });
-    }
-}

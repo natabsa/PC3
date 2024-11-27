@@ -46,14 +46,3 @@ export async function cadPaciente(req, res)
 }
 
 
-export async function cadObj(req, res){
-
-    try 
-    {
-        res.status(200).json(await create(req.params.obj, req.body));
-    } catch(error)
-    {
-        console.log(error.toString());
-        res.status(500).json({ Error: `Falha ao tentar criar registro de ${req.params.obj}` });
-    }
-}

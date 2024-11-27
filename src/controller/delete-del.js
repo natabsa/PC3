@@ -35,14 +35,4 @@ export async function delVinculo(req, res){
     }
 }
 
-export async function delObj(req, res){
 
-    try 
-    {
-        res.status(200).json(await del(req.params.obj, req.params.id));
-    } catch(error)
-    {
-        console.log(error.toString());
-        res.status(500).json({ Error: `Falha ao tentar deletar registro de ${req.params.obj}` });
-    }
-}
