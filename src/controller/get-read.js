@@ -1,4 +1,4 @@
-import { read } from "../model/model.js";
+import { read } from "../user/user.js";
 
 // Este srquivo: varias funcoes para controlar a leitura de registros nas colecoes do banco de dados
 // "get senha" ainda no mapeada aqui
@@ -26,8 +26,8 @@ export async function enviarFuncionario(req, res){
 }
 
 
-export async function enviarAtividade(req, res){
-    
+export async function enviarAtividade(req, res)
+{
     try {
         res.status(200).json(await read("vinculo", req.params.id));
     } catch(error){
