@@ -1,33 +1,47 @@
-// Arquivo que contem as rotas do metodo HTTP PUT
-
+// File that defines HTTP ROUTES
 
 import express from "express";
-import { delObj, enviarObj, cadObj, altObj, enviarSenha} from "../controller.js";
+//"C.R.U.D"
+import { postEmp, postPt, postRel, postAtv }    from "../controller/post-c.js";
+import { getAtv, getEmp, getPt, getRel, getPw } from "../controller/get-r.js";
+import { putEmp, putPt, putAtv }                from "../controller/put-u.js";
+import { delEmp, delPt, delRel, delAtv }        from "../controller/delete-d.js";
 
 
 const route=(app) => {
 
     app.use(express.json());
 
-    // Rota para deletar cadastro "objeto genereico"
-    app.delete("/:obj/:id", delObj);
+    // Routes for deleting a object from the database
+    app.delete("/employee/:id", delEmp);
+    app.delete("/patient/:id", delPt);
+    app.delete("/relation/:id", delRel);
+    app.delete("/activity/:id", delAtv);
 
-    // Rota que enviara o registo de um "objeto genereico"
-    app.get("/:obj/:id", enviarObj);
+    // Routes getting a record of a object from the database
+    app.get("/activity/:id", getAtv);
+    app.get("/employee/:id", getEmp);
+    app.get("/patiente/:id", getPt);
+    app.get("/relation/:id", getRel);
 
-    // Rota para recuperar senha
-    app.get("/login/esqueciSenha/:id", enviarSenha);
+    // Route for recovering password
+    app.get("/login/recoverPassword/:id", getPw);
 
-    // Rota que retorna um copia do banco de dados ou um subconjunto deste
-    app.get("/banco/func", enviarBancoFunc);
-    app.get("banco/adm", enviarBancoAdm);
+    // Routes for posting a new object to the database
+    app.post("/post/patient", postPt);
+    app.post("/post/employee", postEmp);
+    app.post("/post/relation", postRel);
+    app.post("/create/activity", postAtv);
 
-    // Rota para cadastrar "objeto genereico"
-    app.post("/cadastrar/:obj", cadObj);
+    // Routes for "updating" a object in the database
+    app.put("/patient/:id", putPt);
+    app.put("/employee/:id", putEmp);
+    app.put("/activity/:id", putAtv);
 
-    // Rota para alterar cadastro de "objeto genereico"
-    app.put("/:obj/:id", altObj);
-
+    /*
+    app.get("/banco/func", getFuncDB);
+    app.get("/banco/adm", getAdminDB);
+    */
 };
 
 export default route;
