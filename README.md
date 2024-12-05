@@ -27,10 +27,10 @@ Estrutura:
 │   ├── config (configuracoes necessarias)
 │   │   └── dbConfig.js
 │   ├── controller (controle e logica da aplicacao)
-│   │   ├── delete-del.js
-│   │   ├── get-read.js
-│   │   ├── post-create.js
-│   │   └── put-update.js
+│   │   ├── delete-d.js
+│   │   ├── get-r.js
+│   │   ├── post-c.js
+│   │   └── put-u.js
 │   ├── index.js
 │   ├── model (modelo de dados e acesso aos mesmos)
 │   │   └── model.js
