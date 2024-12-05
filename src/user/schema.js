@@ -1,46 +1,47 @@
 const mongoose = require('mongoose');
 
 
-const Doenca = new mongoose.Schema(
+const Illness = new mongoose.Schema(
     {
-        nome: String,
-        descricao: String
+        name: String,
+        desc: String
     }
 );
 
 
-const Paciente = new mongoose.Schema(
+const Patient = new mongoose.Schema(
     {
-        nome: String,
-        dataNasciemtno: String,
+        name: String,
+        birthday: String,
         //idade: function ???
         cpf: String,
-        telResponsavel: String,
-        alergia: [String],
-        doenca: [Doenca]
+        responsiblePhone: String,
+        responsibleName: String,
+        responsibleAddress: String,
+        alergy: [String],
+        illness: [Illness]
     }
 );
 
-const Atividade = new mongoose.Schema(
+const Activity = new mongoose.Schema(
     {
-          atividade: String,
-          comeco: String,
-          termino: String,
-          realizada: Boolean
+          name: String,
+          start: String,
+          end: String,
+          done: Boolean
     }
 );
 
-const Funcionario = new mongoose.Schema(
+const Employee = new mongoose.Schema(
     {
-        nome: String,
+        name: String,
         cpf: String,
         password: String,
-        dataNascimento: String,
-        //idade: function ???
-        telefone: String,
-        endereco: String,
-        adm: Boolean,
-        paciente: [Paciente],
+        birthday: String,
+        phone: String,
+        address: String,
+        adimin: Boolean,
+        patient: [Patient],
         login: String,
         //relatorio: function ???
         password: String
