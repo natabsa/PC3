@@ -1,15 +1,16 @@
 const mongoose = require('mongoose');
 
+await mongoose.connect('');
 
-const Illness = new mongoose.Schema(
+const illnessSchema = new mongoose.Schema(
     {
         name: String,
         desc: String
     }
 );
+export const Illness = mongoose.model('Illness', illnessSchema);
 
-
-const Patient = new mongoose.Schema(
+const patientSchema = new mongoose.Schema(
     {
         name: String,
         birthday: String,
@@ -22,8 +23,13 @@ const Patient = new mongoose.Schema(
         illness: [Illness]
     }
 );
+patientSchema.methods.age = () =>
+{
 
-const Activity = new mongoose.Schema(
+};
+export const Patient = mongoose.model('Patient', patientSchema);
+
+const activitySchema = new mongoose.Schema(
     {
           name: String,
           start: String,
@@ -31,8 +37,9 @@ const Activity = new mongoose.Schema(
           done: Boolean
     }
 );
+export const Activity = mongoose.model('Activity', activitySchema);
 
-const Employee = new mongoose.Schema(
+const employeeSchema = new mongoose.Schema(
     {
         name: String,
         cpf: String,
@@ -43,9 +50,15 @@ const Employee = new mongoose.Schema(
         adimin: Boolean,
         patient: [Patient],
         login: String,
-        //relatorio: function ???
         password: String
     }
 );
-
-module.exports = mongoose.model('User', UserSchema);
+employeeSchema.methods.age = () =>
+{
+    
+};
+employeeSchema.methods.dailyReport = () =>
+{
+    
+};
+export const Employee = mongoose.model('Employee', employeeSchema);    
