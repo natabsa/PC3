@@ -1,5 +1,7 @@
 import express from 'express';
-//import... from "./route/"
+import mongoose from 'mongoose';
+
+await mongoose.connect(process.env.DBUSERPWD);
 
 
 const app = express();
