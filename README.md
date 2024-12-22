@@ -10,6 +10,8 @@ npm run build
 ```
 deve instalar os modulos necessários.
 
+Uma variável de ambiente DBUSERPWD deve armazenar a string de conexão.
+
 Servidor deve iniciar com:
 ```sh
 npm run start

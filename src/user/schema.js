@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-await mongoose.connect('');
+await mongoose.connect(process.env.DBUSERPWD);
 
 const illnessSchema = new mongoose.Schema(
     {
