@@ -2,6 +2,8 @@
 
 Respositório para o projeto desenvolvido na disciplina de PC3-IFB 2024/2.
 
+Servidor de API seguindo arquitetura MVC para um sistemas de gerenciamento de clinica
+
 ## Getting Started
 
 Para deploy,
