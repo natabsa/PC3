@@ -1,4 +1,8 @@
 import { read } from "../user/user.js";
+import Activity from './activity.js';
+import Employee from './employee.js';
+import Patent from './patient.js';
+import Illness from './illness.js';
 
 // File for functions controlling read operation to the database
 
