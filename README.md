@@ -1,4 +1,4 @@
-# Node + Express Server
+# Node Express Server with Mongoose
 
 Respositório para o projeto desenvolvido na disciplina de PC3-IFB 2024/2.
 
