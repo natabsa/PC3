@@ -2,7 +2,7 @@ import Patient from '../../model/patient.js';
 
 // File for functions controlling update operation to the database
 
-async function putEmp(req, res){
+export async function putEmp(req, res){
    
     try
     {
@@ -13,6 +13,4 @@ async function putEmp(req, res){
         console.error(error.toString());
         res.status(500).json({ Error: "Fail trying to update patient document" });
     }
-}
-
-export default putEmp;
+};

@@ -22,5 +22,4 @@ employeeSchema.methods.dailyReport = () =>
 {
     
 };*/
-const Employee = mongoose.model('Employee', employeeSchema);    
-export default Employee;
+export const Employee = mongoose.model('Employee', employeeSchema);    

@@ -2,7 +2,7 @@ import Illness from '../../model/illness.js';
 
 // File for function controling create operation on the database
 
-async function postIll(req, res)
+export async function postIll(req, res)
 {
     try {
         res.status(200).json(await Illness.create(req.body));
@@ -11,5 +11,3 @@ async function postIll(req, res)
         res.status(500).json({ Error: "Fail trying to create activity document" });
     };
 };
-
-export default postIll;

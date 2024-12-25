@@ -6,5 +6,4 @@ const illnessSchema = new mongoose.Schema(
         desc: String
     }
 );
-const Illness = mongoose.model('Illness', illnessSchema);
-export default Illness;
+export const Illness = mongoose.model('Illness', illnessSchema);
