@@ -8,4 +8,5 @@ const activitySchema = new mongoose.Schema(
           done: Boolean
     }
 );
-export const Activity = mongoose.model('Activity', activitySchema);
+const Activity = mongoose.model('Activity', activitySchema);
+export default Activity;
