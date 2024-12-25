@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node src/index.js",
-    "build": "npm install express"
+    "build": "npm install express mongoose"
   },
   "author": "Google LLC",
   "license": "Apache-2.0",
