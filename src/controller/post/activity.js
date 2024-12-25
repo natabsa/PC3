@@ -2,7 +2,7 @@ import Activity from '../../model/activity.js';
 
 // File for function controling create operation on the database
 
-export async function postActivity(req, res)
+async function postActivity(req, res)
 {
     try {
         res.status(200).json(await Activity.create(req.body));
@@ -11,3 +11,4 @@ export async function postActivity(req, res)
         res.status(500).json({ Error: "Fail trying to create activity document" });
     };
 };
+export default postActivity;

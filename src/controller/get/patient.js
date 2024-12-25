@@ -2,7 +2,7 @@ import Patient from '../../model/patient.js';
 
 // File for functions controlling read operation to the database
 
-export async function getPt(req, res)
+async function getPt(req, res)
 {
     try
     {
@@ -14,3 +14,4 @@ export async function getPt(req, res)
         res.status(500).json({ Error: "Fail on trying to read/get patient document" });
     }
 };
+export default getPt;

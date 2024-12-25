@@ -2,7 +2,7 @@ import Illness from '../../model/illness.js';
 
 // File for functions controlling read operation to the database
 
-export async function getIll(req, res)
+async function getIll(req, res)
 {
     try
     {
@@ -14,3 +14,4 @@ export async function getIll(req, res)
         res.status(500).json({ Error: "Fail on trying to read/get Illness document" });
     }
 };
+export default getIll;

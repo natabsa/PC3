@@ -2,7 +2,7 @@ import Activity from '../../model/activity.js';
 
 // File for functions controlling read operation to the database
 
-export async function getAtv(req, res)
+async function getAtv(req, res)
 {
     try
     {
@@ -14,3 +14,4 @@ export async function getAtv(req, res)
         res.status(500).json({ Error: "Fail on trying to read/get activity document" });
     }
 };
+export default getAtv;

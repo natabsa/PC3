@@ -2,7 +2,7 @@ import Activity from "../../model/activity.js";
 
 // File for function controlling delete operations to the database
 
-export async function delAtv(req, res) {
+async function delAtv(req, res) {
     try {
         res.status(200).json(await Activity.findByIdAndDelete(req.params.id));
     } catch (error) {
@@ -11,4 +11,5 @@ export async function delAtv(req, res) {
             Error: "Fail trying to delete activity document",
         });
     }
-}
+};
+export default delAtv;

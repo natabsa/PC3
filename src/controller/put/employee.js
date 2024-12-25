@@ -2,7 +2,7 @@ import Employee from '../../model/employee.js';
 
 // File for functions controlling update operation to the database
 
-export async function putEmp(req, res){
+async function putEmp(req, res){
    
     try
     {
@@ -14,3 +14,4 @@ export async function putEmp(req, res){
         res.status(500).json({ Error: "Fail trying to update employee document" });
     }
 };
+export default putEmp;

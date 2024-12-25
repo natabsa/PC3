@@ -2,7 +2,7 @@ import Activity from '../../model/activity.js';
 
 // File for functions controlling update operation to the database
 
-export async function putAtv(req, res)
+async function putAtv(req, res)
 {
     try
     {
@@ -14,3 +14,4 @@ export async function putAtv(req, res)
         res.status(500).json({ Error: "Fail trying to update activity document" });
     }
 };
+export default putAtv;

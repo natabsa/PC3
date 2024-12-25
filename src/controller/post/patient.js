@@ -1,6 +1,6 @@
 import Patient from "../../model/patient.js";
 
-export async function postPt(req, res)
+async function postPt(req, res)
 {
     try {
         res.status(200).json(await Patient.create(req.body));
@@ -9,3 +9,4 @@ export async function postPt(req, res)
         res.status(500).json({ Error: "fail trying to create patient document" });
     }
 };
+export default postPt;

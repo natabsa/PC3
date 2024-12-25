@@ -2,7 +2,7 @@ import Employee from '../../model/employee.js';
 
 // File for functions controlling read operation to the database
 
-export async function getEmp(req, res)
+async function getEmp(req, res)
 {
     try
     {
@@ -14,3 +14,4 @@ export async function getEmp(req, res)
         res.status(500).json({ Error: "Fail on trying to read/get employee document" });
     }
 };
+export default getEmp;

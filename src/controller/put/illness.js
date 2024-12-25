@@ -2,7 +2,7 @@ import Illness from '../../model/illness.js';
 
 // File for functions controlling update operation to the database
 
-export async function putIll(req, res){
+async function putIll(req, res){
    
     try
     {
@@ -14,3 +14,4 @@ export async function putIll(req, res){
         res.status(500).json({ Error: "Fail trying to update Illness document" });
     }
 };
+export default putIll;

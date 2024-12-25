@@ -4,7 +4,7 @@ import Illness from '../../model/illness.js';
 
 // File for function controlling delete operations to the database
 
-export async function delIll(req, res)
+async function delIll(req, res)
 {
     try
     {
@@ -16,3 +16,4 @@ export async function delIll(req, res)
         res.status(500).json({ Error: "Fail trying to delete illness document" });
     }
 };
+export default delIll;
