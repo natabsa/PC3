@@ -9,7 +9,10 @@ const employeeSchema = new mongoose.Schema(
         phone: String,
         address: String,
         adimin: Boolean,
-        patient: [Patient],
+        patient: [{
+            type: SchemaTypes.ObjectId,
+            ref: 'Patient'
+        }],
         login: String,
         password: String
     }
