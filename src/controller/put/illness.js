@@ -1,4 +1,4 @@
-import Illness from '../../mode/illness.js';
+import Illness from '../../model/illness.js';
 
 // File for functions controlling update operation to the database
 
