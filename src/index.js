@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import route from "./router/router.js";
 
 try {
-	await mongoose.connect(process.env.DBUSERPWD);
+	await mongoose.connect(process.env.DBCONNCTSTR);
 } catch (error) {
 	console.log(error.toString());
 }
