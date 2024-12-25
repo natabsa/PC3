@@ -3,13 +3,18 @@ import mongoose from 'mongoose';
 const patientSchema = new mongoose.Schema(
     {
         name: String,
-        birthday: String,
+        birthday: Date,
         cpf: String,
         responsiblePhone: String,
         responsibleName: String,
         responsibleAddress: String,
         alergy: [String],
-        illness: [Illness]
+        illnesses: [{
+            illness: {
+                type: SchemaTypes.ObjectId,
+                ref: 'Illness'
+            }
+        }]
     }
 );
 patientSchema.methods.age = () =>

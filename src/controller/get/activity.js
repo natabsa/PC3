@@ -2,11 +2,11 @@ import Activity from '../../mode/activity.js';
 
 // File for functions controlling read operation to the database
 
-export async function getAtv(req, res)
+async function getAtv(req, res)
 {
     try
     {
-        res.status(200).json(await read(req.params.id));
+        res.status(200).json(await Activity.findById(req.params.id));
     }
     catch(error)
     {

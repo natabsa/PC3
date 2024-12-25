@@ -6,7 +6,7 @@ async function putEmp(req, res){
    
     try
     {
-        res.status(200).json(await update("employee", req.params.id, req.body));
+		res.status(200).json(await Employee.findByIdAndUpdate( req.params.id, req.body, {new: true} ));
     }
     catch(error)
     {

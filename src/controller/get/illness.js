@@ -2,11 +2,11 @@ import Illness from '../../mode/illness.js';
 
 // File for functions controlling read operation to the database
 
-export async function getIll(req, res)
+async function getIll(req, res)
 {
     try
     {
-        res.status(200).json(await find(req.params.id));
+        res.status(200).json(await Illness.findById(req.params.id));
     }
     catch(error)
     {

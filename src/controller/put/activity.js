@@ -6,7 +6,7 @@ async function putAtv(req, res)
 {
     try
     {
-        res.status(200).json(await Activity.update(req.params.id, req.body));
+		res.status(200).json(await Activity.findByIdAndUpdate( req.params.id, req.body, {new: true} ));
     }
     catch(error)
     {

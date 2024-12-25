@@ -6,7 +6,7 @@ async function getPt(req, res)
 {
     try
     {
-        res.status(200).json(await read(req.params.id));
+        res.status(200).json(await Patient.findById(req.params.id));
     }
     catch(error)
     {
