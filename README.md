@@ -21,29 +21,39 @@ npm run start
 
 Estrutura:
 ```
-README.md
-package-lock.json
-package.json
-src/controller/delete/activity.js
-src/controller/delete/employee.js
-src/controller/delete/illness.js
-src/controller/delete/patient.js
-src/controller/get/activity.js
-src/controller/get/employee.js
-src/controller/get/illness.js
-src/controller/get/patient.js
-src/controller/post/activity.js
-src/controller/post/employee.js
-src/controller/post/illness.js
-src/controller/post/patient.js
-src/controller/put/activity.js
-src/controller/put/employee.js
-src/controller/put/illness.js
-src/controller/put/patient.js
-src/index.js
-src/model/activity.js
-src/model/employee.js
-src/model/illness.js
-src/model/patient.js
-src/router/router.js
+.
+ |-package.json
+ |-package-lock.json
+ |-README.md
+ |-src
+ | |-model
+ | | |-activity.js
+ | | |-employee.js
+ | | |-illness.js
+ | | |-patient.js
+ | |-index.js
+ | |-controller
+ | | |-delete
+ | | | |-activity.js
+ | | | |-employee.js
+ | | | |-illness.js
+ | | | |-patient.js
+ | | |-put
+ | | | |-activity.js
+ | | | |-employee.js
+ | | | |-illness.js
+ | | | |-patient.js
+ | | |-get
+ | | | |-activity.js
+ | | | |-employee.js
+ | | | |-illness.js
+ | | | |-patient.js
+ | | |-post
+ | | | |-activity.js
+ | | | |-employee.js
+ | | | |-illness.js
+ | | | |-patient.js
+ | |-router
+ | | |-router.js
+ |-.gitignore
 ```
