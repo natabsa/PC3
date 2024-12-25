@@ -1,11 +1,10 @@
-import express from 'express';
-import mongoose from 'mongoose';
+import express from "express";
+import mongoose from "mongoose";
+import route from "./router/router.js";
 
-try
-{
+try {
 	await mongoose.connect(process.env.DBUSERPWD);
-} catch(error)
-{
+} catch (error) {
 	console.log(error.toString());
 }
 
@@ -13,9 +12,11 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
+app.get("/", (req, res) => {
 	res.send("Node Express Server with Mongoose");
 });
+
+route(app);
 
 const port = parseInt(process.env.PORT) || 3000;
 

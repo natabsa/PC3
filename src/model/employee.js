@@ -14,13 +14,13 @@ const employeeSchema = new mongoose.Schema(
         password: String
     }
 );
-employeeSchema.methods.age = () =>
+/*employeeSchema.methods.age = () =>
 {
     
 };
 employeeSchema.methods.dailyReport = () =>
 {
     
-};
+};*/
 const Employee = mongoose.model('Employee', employeeSchema);    
 export default Employee;

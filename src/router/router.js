@@ -2,31 +2,28 @@
 
 import express from "express";
 //"C.R.U.D"
-import { postEmp }	from "../controller/post/employee.js";
-import { postPt }	from "../controller/post/patient.js";
-import { postIll }	from "../controller/post/illness.js";
-import { postAtv }	from "../controller/post/activity.js";
+import { postEmp } from "../controller/post/employee.js";
+import { postPt } from "../controller/post/patient.js";
+import { postIll } from "../controller/post/illness.js";
+import { postAtv } from "../controller/post/activity.js";
 
-import { getAtv }	from "../controller/get/activity.js";
-import { getEmp }	from "../controller/get/employee.js";
-import { getPt }	from "../controller/get/patient.js";
-import { getIll }	from "../controller/get/illness.js";
+import { getAtv } from "../controller/get/activity.js";
+import { getEmp } from "../controller/get/employee.js";
+import { getPt } from "../controller/get/patient.js";
+import { getIll } from "../controller/get/illness.js";
 //import { getPw } from "../controller/get/r.js";
 
-import { putEmp }	from "../controller/put/employee.js";
-import { putPt }	from "../controller/put/patient.js";
-import { putAtv }	from "../controller/put/activity.js";
-import { putIll}	from "../controller/put/illness.js";
+import { putEmp } from "../controller/put/employee.js";
+import { putPt } from "../controller/put/patient.js";
+import { putAtv } from "../controller/put/activity.js";
+import { putIll } from "../controller/put/illness.js";
 
-import { delEmp }	from "../controller/delete/employee.js";
-import { delPt }	from "../controller/delete/patient.js";
-import { delIll }	from "../controller/delete/illness.js";
-import { delAtv }	from "../controller/delete/activity.js";
+import { delEmp } from "../controller/delete/employee.js";
+import { delPt } from "../controller/delete/patient.js";
+import { delIll } from "../controller/delete/illness.js";
+import { delAtv } from "../controller/delete/activity.js";
 
-
-
-const route=(app) => {
-
+const route = (app) => {
     app.use(express.json());
 
     // Routes for deleting a object from the database
@@ -54,7 +51,7 @@ const route=(app) => {
     app.put("/api/patient/:id", putPt);
     app.put("/api/employee/:id", putEmp);
     app.put("/api/activity/:id", putAtv);
-    app.put("/api/illness/:id", putIll)
+    app.put("/api/illness/:id", putIll);
 
     /*
     app.get("/api/banco/func", getFuncDB);

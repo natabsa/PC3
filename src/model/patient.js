@@ -17,9 +17,9 @@ const patientSchema = new mongoose.Schema(
         }]
     }
 );
-patientSchema.methods.age = () =>
+/*patientSchema.methods.age = () =>
 {
 
-};
+};*/
 const Patient = mongoose.model('Patient', patientSchema);
 export default Patient;
