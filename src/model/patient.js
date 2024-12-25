@@ -9,12 +9,7 @@ const patientSchema = new mongoose.Schema(
         responsibleName: String,
         responsibleAddress: String,
         alergy: [String],
-        illnesses: [{
-            illness: {
-                type: SchemaTypes.ObjectId,
-                ref: 'Illness'
-            }
-        }]
+        illnesses: [mongoose.Types.ObjectId]
     }
 );
 /*patientSchema.methods.age = () =>
