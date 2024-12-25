@@ -1,4 +1,4 @@
-import Patient from '../../mode/patient.js';
+import Patient from '../../model/patient.js';
 
 // File for functions controlling read operation to the database
 

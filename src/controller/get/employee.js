@@ -1,4 +1,4 @@
-import Employee from '../../mode/employee.js';
+import Employee from '../../model/employee.js';
 
 // File for functions controlling read operation to the database
 
