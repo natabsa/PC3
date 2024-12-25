@@ -1,4 +1,4 @@
-import Activity from '../../mode/activity.js';
+import Activity from '../../model/activity.js';
 
 // File for functions controlling read operation to the database
 
