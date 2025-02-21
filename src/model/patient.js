@@ -2,7 +2,8 @@ import mongoose from 'mongoose';
 
 const patientSchema = new mongoose.Schema(
     {
-        name: String,
+        firstName: String,
+        lastName: String,
         birthday: Date,
         cpf: String,
         responsiblePhone: String,
